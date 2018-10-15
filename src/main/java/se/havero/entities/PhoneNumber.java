@@ -10,11 +10,10 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(namespace = "https://se.havero/phonenumbers")
-public class PhoneNumber implements Serializable{
-    
+public class PhoneNumber implements Serializable {
+
     private long id;
     private long uid;
     private String number;
@@ -22,17 +21,14 @@ public class PhoneNumber implements Serializable{
 
     public PhoneNumber() {
     }
-    
 
     public PhoneNumber(long id, long uid, String number, boolean reserved) {
-        
+
         this.id = id;
         this.uid = uid;
         this.number = number;
         this.reserved = reserved;
     }
-    
-    
 
     /**
      * @return the id
@@ -92,10 +88,7 @@ public class PhoneNumber implements Serializable{
 
     @Override
     public String toString() {
-        return "PhoneNumber [ id "+id+", number="+number+", uid="+uid+", reserved="+reserved+" ]";
+        return "PhoneNumber [ id " + id + ", number=" + number + ", uid=" + uid + ", reserved=" + reserved + " ]";
     }
-    
-    
-    
-    
+
 }

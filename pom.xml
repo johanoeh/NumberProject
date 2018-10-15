@@ -36,7 +36,7 @@
                     </executions>
                     <configuration>
                         <sources>
-                            <source>src/main/java/se/havero/entities</source>jax
+                            <source>src/main/java/se/havero/entities</source>
                         </sources>
                         <transformSchemas>
                             <transformSchema>

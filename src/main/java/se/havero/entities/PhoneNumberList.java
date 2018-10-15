@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package se.havero.entities;
 
 
@@ -38,8 +34,5 @@ public class PhoneNumberList implements Serializable{
     public void setPhoneNumbers(List<PhoneNumber> phoneNumbers) {
         this.phoneNumbers = phoneNumbers;
     }
-    
-    
-    
     
 }
