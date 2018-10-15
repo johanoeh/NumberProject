@@ -5,11 +5,18 @@
  */
 package entities;
 
+import java.io.Serializable;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
 /**
  *
  * @author johan
  */
-public class PhoneNumber {
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(namespace = "https://se.havero/phonenumbers")
+public class PhoneNumber implements Serializable{
     
     private long id;
     private long uid;

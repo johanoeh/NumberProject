@@ -21,6 +21,7 @@ public class Application {
         NumberRepository numberRepository  = new NumberRepository(100);
         Map<String, PhoneNumber> phoneNumbers = numberRepository.getPhoneNumbers();
         Collection<PhoneNumber> values = phoneNumbers.values();
+        
         for (PhoneNumber phoneNumber : values) {
             System.out.println(phoneNumber);
         }

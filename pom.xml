@@ -10,4 +10,52 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+    
+     <dependencies>
+        <!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.2.11</version>
+        </dependency>    
+    </dependencies>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>jaxb2-maven-plugin</artifactId>
+                    <version>2.2</version>
+                    <executions>
+                        <execution>
+                            <id>schemagen</id>
+                            <goals>
+                                <goal>schemagen</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <sources>
+                            <source>src/main/java/se/havero/containers</source>
+                        </sources>
+                        <transformSchemas>
+                            <transformSchema>
+                                <uri>https://se.havero/phonenumber</uri>
+                                <toPrefix>c</toPrefix>
+                                <toFile>PhoneNumber.xsd</toFile>
+                            </transformSchema>
+                            <transformSchema>
+                                <uri>https://se.havero/phonenumbers</uri>
+                                <toPrefix>c</toPrefix>
+                                <toFile>PhoneNumbers.xsd</toFile>
+                            </transformSchema>  
+                        </transformSchemas>
+                        <!-- Warning overwrites everything in directory  some be careful when using this-->
+                         <!-- <outputDirectory>{$project.basedir}</outputDirectory> -->
+
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>
