@@ -3,17 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package entities;
+package se.havero.entities;
 
 import java.io.Serializable;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
-/**
- *
- * @author johan
- */
+
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(namespace = "https://se.havero/phonenumbers")
 public class PhoneNumber implements Serializable{

@@ -5,7 +5,7 @@
  */
 package se.havero.sater.main;
 
-import entities.PhoneNumber;
+import se.havero.entities.PhoneNumber;
 import java.util.Collection;
 import java.util.Map;
 import se.havero.sater.gen.NumberRepository;

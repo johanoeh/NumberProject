@@ -11,7 +11,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
     
-     <dependencies>
+    <dependencies>
         <!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
         <dependency>
             <groupId>javax.xml.bind</groupId>
@@ -36,7 +36,7 @@
                     </executions>
                     <configuration>
                         <sources>
-                            <source>src/main/java/se/havero/containers</source>
+                            <source>src/main/java/se/havero/entities</source>jax
                         </sources>
                         <transformSchemas>
                             <transformSchema>
@@ -51,8 +51,12 @@
                             </transformSchema>  
                         </transformSchemas>
                         <!-- Warning overwrites everything in directory  some be careful when using this-->
-                         <!-- <outputDirectory>{$project.basedir}</outputDirectory> -->
-
+                        <!-- <outputDirectory>{$project.basedir}</outputDirectory> -->
+                        <filter implementation="org.codehaus.mojo.jaxb2.shared.filters.pattern.PatternFileFilter">
+                            <patterns>
+                                <pattern>Namespace.java</pattern>
+                            </patterns>
+                        </filter>
                     </configuration>
                 </plugin>
             </plugins>
